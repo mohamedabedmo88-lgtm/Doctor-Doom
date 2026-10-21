@@ -1,0 +1,17 @@
+/* LAYOUT — header/navigation and footer */
+/* ===== 2. NAVIGATION ===== */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(16,23,16,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font-family:var(--display);font-weight:900;font-size:1.9rem;letter-spacing:.14em;text-decoration:none;color:var(--silver)}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;margin:0;padding:0}
+.nav-links a{text-decoration:none;font-size:.92rem;color:var(--muted);padding:.4rem 0;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--accent);border-color:var(--accent)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);color:var(--text);padding:.55rem .8rem;font:600 .85rem var(--body);cursor:pointer}
+/* ===== 8. FOOTER ===== */
+footer{border-top:1px solid var(--line);padding:3rem 0 2.5rem;background:#0b100b}
+.foot{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap}
+.foot p{color:var(--muted);font-size:.95rem;margin:.6rem 0 0}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;gap:1.6rem;flex-wrap:wrap}
+.foot ul a{color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .2s}
+.foot ul a:hover{color:var(--accent)}
+.disclaimer{margin:2.2rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);max-width:none}

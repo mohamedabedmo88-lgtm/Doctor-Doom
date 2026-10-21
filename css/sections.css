@@ -1,0 +1,31 @@
+/* SECTIONS — hero, origin, powers, Latveria, legacy */
+/* ===== 3. HERO ===== */
+.hero{position:relative;padding:clamp(3rem,8vw,7rem) 0 clamp(4rem,9vw,8rem);background:radial-gradient(60% 70% at 78% 40%,rgba(112,184,120,.14),transparent 70%),radial-gradient(40% 50% at 0% 100%,rgba(24,61,42,.7),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,5rem);align-items:center}
+.hero h1{font-size:clamp(3.6rem,10vw,8.5rem);font-weight:900;color:var(--text)}
+.hero .lead{font-size:1.15rem;color:var(--muted);margin:1.8rem 0 2.2rem}
+.hero-actions{display:flex;align-items:center;gap:1.8rem;flex-wrap:wrap}
+/* ===== 4. ORIGIN ===== */
+.origin{padding:clamp(4rem,9vw,8rem) 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:center}
+h2{font-size:clamp(2.6rem,6vw,5rem);margin-bottom:1.8rem}
+.origin p{color:var(--muted)}
+.origin p:first-of-type{color:var(--text);font-size:1.15rem}
+/* ===== 5. POWERS ===== */
+.powers{padding:clamp(4rem,9vw,8rem) 0;background:linear-gradient(180deg,#0d130d,#142a1e 50%,#0d130d);border-block:1px solid var(--line)}
+.powers h2{max-width:14ch}
+/* ===== 6. LATVERIA ===== */
+.latveria{padding:clamp(4rem,9vw,8rem) 0;background:radial-gradient(70% 60% at 50% 0%,rgba(112,184,120,.16),transparent 70%),#0a0f0a;overflow:hidden}
+.latveria .wide{width:min(1400px,100% - 2rem);margin-inline:auto}
+.lat-head{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:end;margin:0 auto 3rem;width:min(1200px,100% - 3rem)}
+.lat-head h2{font-size:clamp(3rem,8vw,6.8rem);margin:0}
+.lat-head p{color:var(--muted);margin:0}
+.latveria .ph{box-shadow:0 40px 120px rgba(0,0,0,.6),0 0 0 1px rgba(112,184,120,.12)}
+.lat-notes{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;width:min(1200px,100% - 3rem);margin:3rem auto 0}
+.lat-notes div{border-left:2px solid var(--accent);padding-left:1.2rem}
+.lat-notes h3{font-size:1.5rem;margin-bottom:.5rem}
+.lat-notes p{color:var(--muted);font-size:.98rem;margin:0}
+/* ===== 7. LEGACY ===== */
+.legacy{padding:clamp(5rem,12vw,11rem) 0;text-align:center;background:radial-gradient(50% 60% at 50% 50%,rgba(24,61,42,.9),transparent 75%)}
+.legacy h2{font-size:clamp(3.5rem,13vw,11rem);font-weight:900;margin-bottom:2rem;color:var(--silver)}
+.legacy p{margin:0 auto 2.4rem;color:var(--muted);font-size:1.15rem}

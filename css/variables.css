@@ -1,0 +1,8 @@
+/* DESIGN TOKENS — change colors and fonts here */
+:root{
+  --bg:#101710; --surface:#183D2A; --accent:#70B878;
+  --text:#F0F2ED; --muted:#A6ADA6; --line:#2c3a31; --silver:#c3cbc6;
+  --display:"Big Shoulders Display","Impact","Arial Narrow Bold",sans-serif;
+  --body:"Hanken Grotesk","Segoe UI",system-ui,-apple-system,sans-serif;
+  color-scheme:dark;
+}

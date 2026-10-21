@@ -1,0 +1,23 @@
+/* COMPONENTS — buttons, image placeholders, cards */
+.btn{display:inline-block;font:600 .9rem var(--body);letter-spacing:.06em;text-decoration:none;cursor:pointer;padding:.85rem 1.6rem;border:1px solid var(--accent);background:var(--accent);color:#0d140d;transition:background .2s,color .2s,box-shadow .2s}
+.btn:hover{background:transparent;color:var(--accent);box-shadow:0 0 28px rgba(112,184,120,.25)}
+.nav-links .btn{padding:.6rem 1.2rem;color:#0d140d;border-bottom:1px solid var(--accent)}
+.nav-links .btn:hover{color:var(--accent)}
+.text-link{font-weight:500;text-decoration:none;color:var(--silver);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s}
+.text-link:hover{color:var(--accent);border-color:var(--accent)}
+/* ===== IMAGE PLACEHOLDERS — to use real art, replace the whole <figure class="ph"> with an <img> (see comments in the HTML) ===== */
+.ph{position:relative;margin:0;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#1d4a33 0%,#112018 55%,#0c120c 100%)}
+.ph::before{content:"";position:absolute;inset:12px;border:1px solid rgba(195,203,198,.18);pointer-events:none}
+.ph::after{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(112,184,120,.22),transparent 68%)}
+.ph span{position:relative;z-index:1;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);text-align:center;padding:0 1.5rem}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph-hero{aspect-ratio:4/5}
+.ph-origin{aspect-ratio:1/1}
+.ph-latveria{aspect-ratio:21/9;min-height:280px}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}
+.card{background:var(--bg);padding:2rem 1.6rem 2.2rem;transition:background .3s}
+.card:hover{background:#15271c}
+.card svg{width:44px;height:44px;stroke:var(--accent);fill:none;stroke-width:1.5;margin-bottom:1.6rem;transition:stroke .3s}
+.card:hover svg{stroke:var(--silver)}
+.card h3{font-size:1.7rem;margin-bottom:.8rem}
+.card p{color:var(--muted);font-size:.98rem;margin:0}
