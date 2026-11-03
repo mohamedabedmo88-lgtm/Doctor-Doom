@@ -5,7 +5,7 @@
 .nav-links .btn:hover{color:var(--accent)}
 .text-link{font-weight:500;text-decoration:none;color:var(--silver);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s}
 .text-link:hover{color:var(--accent);border-color:var(--accent)}
-/* ===== IMAGE PLACEHOLDERS — to use real art, replace the whole <figure class="ph"> with an <img> (see comments in the HTML) ===== */
+
 .ph{position:relative;margin:0;display:grid;place-items:center;overflow:hidden;border:1px solid var(--line);background:linear-gradient(160deg,#1d4a33 0%,#112018 55%,#0c120c 100%)}
 .ph::before{content:"";position:absolute;inset:12px;border:1px solid rgba(195,203,198,.18);pointer-events:none}
 .ph::after{content:"";position:absolute;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(112,184,120,.22),transparent 68%)}
@@ -21,3 +21,24 @@
 .card:hover svg{stroke:var(--silver)}
 .card h3{font-size:1.7rem;margin-bottom:.8rem}
 .card p{color:var(--muted);font-size:.98rem;margin:0}
+
+
+.ph:has(img)::after { display: none; }
+.ph-hero img { object-position: center top; }
+.ph-latveria img { object-position: 35% center; }
+
+
+/* the floating quiz icon */
+.quiz-tip{position:absolute;left:88px;white-space:nowrap;padding:.45rem .8rem;background:var(--bg);border:1px solid var(--line);color:var(--text);font:600 .72rem var(--body);letter-spacing:.16em;text-transform:uppercase;opacity:0;pointer-events:none;transform:translateX(-6px);transition:opacity .2s,transform .2s}
+.quiz-fab:hover .quiz-tip,.quiz-fab:focus-visible .quiz-tip{opacity:1;transform:none}
+.quiz-fab{position:fixed;left:1.25rem;bottom:calc(1.25rem + env(safe-area-inset-bottom,0px));z-index:40;width:76px;height:76px;padding:0;display:grid;place-items:center;background:none;border:0;cursor:pointer;animation:fab-glow 3s ease-in-out infinite;transition:transform .2s}
+.quiz-fab:hover{transform:scale(1.1) rotate(-3deg)}
+.quiz-fab img{width:100%;height:100%;object-fit:contain;display:block}
+@keyframes fab-glow{0%,100%{filter:drop-shadow(0 0 8px rgba(112,184,120,.35))}50%{filter:drop-shadow(0 0 18px rgba(112,184,120,.75))}}
+
+.quiz-dialog{width:min(860px,100% - 2rem);max-height:90vh;padding:0;border:0;background:transparent;color:var(--text);overflow:auto}
+.quiz-dialog::backdrop{background:rgba(5,9,5,.85);backdrop-filter:blur(4px)}
+.quiz-dialog .eyebrow{margin:0 0 .8rem 2px}
+.quiz-close{position:absolute;top:.8rem;right:.8rem;z-index:2;width:38px;height:38px;background:var(--bg);color:var(--muted);border:1px solid var(--line);font-size:1rem;cursor:pointer;transition:color .2s,border-color .2s}
+.quiz-close:hover{color:var(--accent);border-color:var(--accent)}
+body:has(.quiz-dialog[open]){overflow:hidden}

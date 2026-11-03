@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DOOM — The Man Behind the Mask</title>
+<title>DOOM . The Man Behind the Mask</title>
 <meta name="description" content="An independent fan-made character profile of Doctor Doom, ruler of Latveria.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,16 +20,22 @@
 
 <header class="site-header">
   <nav class="wrap nav" aria-label="Main">
-    <a class="logo" href="#overview" aria-label="DOOM — back to overview">DOOM</a>
+  <a class="logo" href="#overview" aria-label="DOOM — back to overview">DOOM</a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#origin">Origin</a></li>
+    <li><a href="#powers">Powers</a></li>
+    <li><a href="#latveria">Latveria</a></li>
+    <li><a class="btn" href="https://www.marvel.com/characters/doctor-doom-victor-von-doom/in-comics" target="_blank" rel="noopener noreferrer" aria-label="Explore His Legacy on Marvel.com (opens in a new tab)">Explore His Legacy</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="music-btn" id="music-btn" type="button" aria-pressed="false" aria-label="Play theme music">
+      <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+      <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+    </button>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#overview">Overview</a></li>
-      <li><a href="#origin">Origin</a></li>
-      <li><a href="#powers">Powers</a></li>
-      <li><a href="#latveria">Latveria</a></li>
-      <li><a class="btn" href="#legacy">Explore His Legacy</a></li>
-    </ul>
-  </nav>
+  </div>
+</nav>
 </header>
 
 <main>
@@ -46,9 +52,27 @@
         </div>
       </div>
       <!-- HERO ARTWORK PLACEHOLDER: replace this <figure> with <figure class="ph ph-hero"><img src="your-image.jpg" alt="Describe the artwork"></figure> -->
-      <figure class="ph ph-hero rise d2" role="img" aria-label="Placeholder for hero artwork">
-        <span>Hero Artwork Placeholder</span>
+      <figure class="ph ph-hero rise d2">
+        <img src="assets/images/Hero.webp" alt="Doctor Doom in dark green armor and a hood, emerging from green smoke">
       </figure>
+    </div>
+  </section>
+
+  <!--Countdown feature-->
+  <section class="countdown" id="countdown" aria-labelledby="countdown-title">
+    <div class="wrap countdown-inner">
+      <div>
+        <p class="eyebrow">In Theaters</p>
+        <h2 id="countdown-title">Avengers: Doomsday</h2>
+        <p class="muted" id="cd-date"></p>
+      </div>
+      <div class="timer" id="timer" role="timer" aria-label="Time remaining until Avengers: Doomsday">
+        <div class="unit"><span class="num" id="cd-days">00</span><span class="label">Days</span></div>
+        <div class="unit"><span class="num" id="cd-hours">00</span><span class="label">Hours</span></div>
+        <div class="unit"><span class="num" id="cd-minutes">00</span><span class="label">Minutes</span></div>
+        <div class="unit"><span class="num" id="cd-seconds">00</span><span class="label">Seconds</span></div>
+      </div>
+      <p class="countdown-done" id="cd-done" hidden>Now in theaters</p>
     </div>
   </section>
 
@@ -64,8 +88,8 @@
         <p>In the Himalayas, he forged armor and a mask with his own hands. He emerged as Doctor Doom, no longer just a student of the world, but a man determined to rule it.</p>
       </div>
       <!-- ORIGIN ARTWORK PLACEHOLDER: replace this <figure> with an <img class="ph-origin"> and real alt text -->
-      <figure class="ph ph-origin" role="img" aria-label="Placeholder for origin artwork">
-        <span>Origin Artwork Placeholder</span>
+      <figure class="ph ph-origin">
+       <img src="assets/images/origin.webp" alt="A hooded figure in a green cloak overlooking a snowy town below mountains">
       </figure>
     </div>
   </section>
@@ -107,12 +131,15 @@
         <p class="eyebrow">The Kingdom of Latveria</p>
         <h2 id="latveria-title">A Kingdom Under One Will</h2>
       </div>
-      <p>Latveria is a fictional European nation, and Doctor Doom is its absolute ruler. Under his command it is orderly, prosperous in its own way, and entirely his.</p>
+      <div class="lat-intro">
+        <p><strong>Latveria is a fictional European nation, and Doctor Doom is its absolute ruler.</strong> Under his command it is orderly, prosperous in its own way, and entirely his.</p>
+        <p>Its castle, its laws, and its army of Doombots all answer to a single will.</p>
+      </div>
     </div>
     <div class="wide">
       <!-- LATVERIA ARTWORK PLACEHOLDER: replace this <figure> with a wide <img> (21:9 works well) and real alt text -->
-      <figure class="ph ph-latveria" role="img" aria-label="Placeholder for Latveria castle artwork">
-        <span>Latveria Artwork Placeholder</span>
+      <figure class="ph ph-latveria">
+       <img src="assets/images/footer_2.webp" alt="Doctor Doom in a hood and metal mask, his green cape streaming behind him">
       </figure>
     </div>
     <div class="lat-notes">
@@ -162,8 +189,30 @@
   </div>
 </footer>
 
+<!-- doom lore quiz feature -->
+<button class="quiz-fab" id="quiz-open" type="button" aria-haspopup="dialog" aria-label="Open the Doom Lore Quiz">
+  <img src="assets/images/dooms_icon.png" alt="">
+  <span class="quiz-tip">Doom Lore Quiz</span>
+</button>
+
+<dialog class="quiz-dialog" id="quiz-dialog" aria-labelledby="quiz-heading">
+  <button class="quiz-close" id="quiz-close" type="button" aria-label="Close quiz">✕</button>
+  <p class="eyebrow" id="quiz-heading">The Doom Lore Quiz</p>
+  <div class="quiz-card" id="quiz-card" aria-live="polite">
+    <span class="q-count">Entrance exam · 5 questions</span>
+    <h3 class="q-text">Prove you paid attention.</h3>
+    <p class="rank-text">No hints, no second chances. Well, one: you can try again.</p>
+    <div><button class="btn" id="quiz-start" type="button">Test Your Knowledge</button></div>
+  </div>
+</dialog>
+
 <script src="js/nav.js"></script>
 <script src="js/back-to-top.js"></script>
 <script src="js/scrollspy.js"></script>
+<script src="js/countdown.js"></script>
+<audio id="bg-music" src="assets/audio/doom-theme.mp3" loop preload="none"></audio>
+<script src="js/music.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/quiz-modal.js"></script>
 </body>
 </html>

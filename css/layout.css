@@ -15,3 +15,14 @@ footer{border-top:1px solid var(--line);padding:3rem 0 2.5rem;background:#0b100b
 .foot ul a{color:var(--muted);text-decoration:none;font-size:.92rem;transition:color .2s}
 .foot ul a:hover{color:var(--accent)}
 .disclaimer{margin:2.2rem 0 0;padding-top:1.5rem;border-top:1px solid var(--line);font-size:.82rem;color:var(--muted);max-width:none}
+
+/* Play music buttom feature */
+.nav-right{display:flex;align-items:center;gap:.9rem}
+.music-btn{display:grid;place-items:center;width:42px;height:42px;padding:0;background:var(--surface);color:var(--accent);border:1px solid var(--accent);box-shadow:4px 4px 0 var(--silver);cursor:pointer;transition:background .2s,color .2s,transform .15s,box-shadow .15s}
+.music-btn svg{width:18px;height:18px;fill:currentColor}
+.music-btn .icon-pause{display:none}
+.music-btn.playing .icon-play{display:none}
+.music-btn.playing .icon-pause{display:block}
+.music-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--silver)}
+.music-btn.playing{background:var(--accent);color:#0d140d}
+.music-btn:disabled{opacity:.4;cursor:not-allowed;box-shadow:none;transform:none}
