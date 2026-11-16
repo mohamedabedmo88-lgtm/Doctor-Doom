@@ -56,7 +56,8 @@
       </div>
       <!-- HERO ARTWORK PLACEHOLDER: replace this <figure> with <figure class="ph ph-hero"><img src="your-image.jpg" alt="Describe the artwork"></figure> -->
       <figure class="ph ph-hero rise d2">
-        <img src="assets/images/Hero.webp" alt="Doctor Doom in dark green armor and a hood, emerging from green smoke">
+        <button class="zoom-btn" type="button" aria-label="View hero artwork larger">
+          <img src="assets/images/Hero.webp" alt="Doctor Doom in dark green armor and a hood, emerging from green smoke">
       </figure>
     </div>
   </section>
@@ -92,7 +93,9 @@
       </div>
       <!-- ORIGIN ARTWORK PLACEHOLDER: replace this <figure> with an <img class="ph-origin"> and real alt text -->
       <figure class="ph ph-origin">
-       <img src="assets/images/origin.webp" alt="A hooded figure in a green cloak overlooking a snowy town below mountains">
+        <button class="zoom-btn" type="button" aria-label="View origin artwork larger">
+          <img src="assets/images/origin.webp" alt="A hooded figure in a green cloak overlooking a snowy town below mountains">
+        </button>  
       </figure>
     </div>
   </section>
@@ -142,7 +145,9 @@
     <div class="wide">
       <!-- LATVERIA ARTWORK PLACEHOLDER: replace this <figure> with a wide <img> (21:9 works well) and real alt text -->
       <figure class="ph ph-latveria">
-       <img src="assets/images/footer_2.webp" alt="Doctor Doom in a hood and metal mask, his green cape streaming behind him">
+        <button class="zoom-btn" type="button" aria-label="View Latveria artwork larger">
+          <img src="assets/images/footer_2.webp" alt="Doctor Doom in a hood and metal mask, his green cape streaming behind him">
+        </button>
       </figure>
     </div>
     <div class="lat-notes">
@@ -209,6 +214,11 @@
   </div>
 </dialog>
 
+<dialog class="lightbox" id="lightbox" aria-label="Enlarged image">
+  <button class="quiz-close" id="lightbox-close" type="button" aria-label="Close image">✕</button>
+  <img id="lightbox-img" src="" alt="">
+</dialog>
+
 <script src="js/nav.js"></script>
 <script src="js/back-to-top.js"></script>
 <script src="js/scrollspy.js"></script>
@@ -218,5 +228,6 @@
 <script src="js/slider.js"></script>
 <script src="js/quiz.js"></script>
 <script src="js/quiz-modal.js"></script>
+<script src="js/lightbox.js"></script>
 </body>
 </html>

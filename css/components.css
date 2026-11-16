@@ -42,3 +42,16 @@
 .quiz-close{position:absolute;top:.8rem;right:.8rem;z-index:2;width:38px;height:38px;background:var(--bg);color:var(--muted);border:1px solid var(--line);font-size:1rem;cursor:pointer;transition:color .2s,border-color .2s}
 .quiz-close:hover{color:var(--accent);border-color:var(--accent)}
 body:has(.quiz-dialog[open]){overflow:hidden}
+
+/* image zooming */
+.zoom-btn{position:absolute;inset:0;padding:0;border:0;background:none;cursor:zoom-in;overflow:hidden}
+.zoom-btn img{transition:transform .5s ease}
+.zoom-btn:hover img{transform:scale(1.04)}
+.zoom-btn::after{content:"VIEW";position:absolute;right:1rem;bottom:1rem;padding:.35rem .7rem;background:rgba(16,23,16,.85);border:1px solid var(--line);font:600 .7rem var(--body);letter-spacing:.2em;color:var(--text);opacity:0;transition:opacity .2s}
+.zoom-btn:hover::after,.zoom-btn:focus-visible::after{opacity:1}
+@media (hover:none){ .zoom-btn::after{opacity:1} }
+
+.lightbox{max-width:94vw;max-height:94vh;padding:0;border:1px solid var(--line);background:var(--bg);overflow:visible}
+.lightbox::backdrop{background:rgba(5,9,5,.75);backdrop-filter:blur(10px)}
+.lightbox img{display:block;width:auto;height:auto;max-width:94vw;max-height:90vh}
+body:has(.lightbox[open]){overflow:hidden}
