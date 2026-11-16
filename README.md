@@ -1,21 +1,32 @@
-# DOOM — The Man Behind the Mask (fan project)
+# DOOM: The Man Behind the Mask
 
-Open `index.html` in a browser. No build step, no dependencies.
+A fan-made, cinematic character page about Doctor Doom (Victor von Doom), built for anyone who wants to get to know him before Avengers: Doomsday.
 
-doom/
-├── index.html          page structure + all text
-├── css/
-│   ├── variables.css   colors and fonts (start here to restyle)
-│   ├── base.css        reset, typography, shared helpers, hero animation
-│   ├── layout.css      navigation bar and footer
-│   ├── components.css  buttons, image placeholders, power cards
-│   ├── sections.css    hero, origin, powers, Latveria, legacy
-│   └── responsive.css  tablet/mobile + reduced-motion rules
-├── js/
-│   ├── nav.js          mobile menu
-│   ├── scrollspy.js    highlights the active nav link
-│   └── back-to-top.js  "Back to the Beginning" button
-└── assets/images/      put your artwork here
+## Features
 
-Replacing a placeholder: find the comment (HERO / ORIGIN / LATVERIA ARTWORK PLACEHOLDER)
-in index.html and swap the <figure> for an <img> pointing to assets/images/your-file.jpg.
+- Release countdown
+- Theme music player with a volume slider
+- Doom lore quiz
+- Click-to-enlarge images with a blurred backdrop
+- Responsive layout
+
+## Built With
+
+HTML, CSS and vanilla JavaScript. No frameworks, no build step.
+
+## Run Locally
+
+Download or clone the repo, then open `index.html` in your browser.
+
+## Project Structure
+
+```
+├── index.html
+├── css/        styles (variables, base, layout, components, sections, responsive)
+├── js/         scripts (nav, countdown, music, volume slider, quiz, lightbox)
+└── assets/     images and audio
+```
+
+## Disclaimer
+
+This is an unofficial fan project. Doctor Doom and related Marvel properties belong to their respective rights holders.
